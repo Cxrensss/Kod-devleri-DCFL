@@ -1,0 +1,15 @@
+#16 haneli şifre 
+import random
+chars='abcdefghijklmnoöprstuvyzwq1234567890ABCDEFGHIJKLMNOPRSTUVYZWQ?!#£'
+print(len(chars))
+c=0
+b=""
+kulad=input("kullanıcı adınızi giriniz")
+for i in range(0,17):
+    while c<16:
+        c+=1
+        eleman=random.randint(0,65)
+        a=(chars[eleman])
+        b+=a
+şifreler={kulad:b}
+print(şifreler)
