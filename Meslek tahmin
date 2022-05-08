@@ -1,0 +1,76 @@
+#meslek tahmin etme
+print("Bu etkinlik hangi mesleğe daha yatkinsiniz bunu bulmak içindir.Bu etkinlikte 5 meslek hakkında sorular olacak meslekler:Doktor,Polis,Mühendis,Veteriner ve şoför ")
+puand=0
+puanp=0
+puanm=0
+puanv=0
+puans=0
+Soru1=input("Soru1:Hayvanlari onlarla ilgilenecek kadar seviyor musunuz? \nA)Evet \nB)Hayır ")
+if Soru1=="a" or "A":
+    puanv+=10
+else:
+    print("tamam")
+print(55*"*")
+Soru2=input("Soru2:Ínsanlarin hayatını kurtarmak için kendi hayatını ortaya koyabilir misiniz? \nA)Evet \nB) Hayır")
+if Soru2=="a" or "A":
+    puanp+=10
+else:
+    print("tamam")
+print(55*"*")
+Soru3=input("Soru3:Insanların yararına olacak eşyalar vb. şeyler tasarlayabilir misiniz? \nA)Evet \nB)Hayır")
+if Soru3=="A" or "a":
+    puanm+=10
+else:
+    print("tamam")
+print(55*"*")
+Soru4=input("Soru4:Araba kullanmayı sever misiniz? \nA)Evet \nB)Hayır ")
+if Soru4=="a"or "A":
+    puans+=10
+else:
+    print("tamam")
+print(55*"*")
+Soru5=input("Soru5:Bir insanın yaşamının sizin elinizde olmasına dayanabilir misiniz? \nA)Evet \nB)Hayır ")
+if Soru5=="a"or "A":
+    puand+=10
+    puanp+=10
+else:
+    print("tamam")
+print(55*"*")
+Soru6=input("Soru6:Az bir maaşla çalışabilir misiniz? \nA)Evet \nB)Hayır ")
+if Soru6=="a" or "A":
+    puand+=10
+    puans+=10
+    puanv+=10
+    puanp+=10
+    puanm+=10
+else:
+    print("tamam")
+Soru7=input("Soru7:Silahtan korkar mısınız? \nA)Evet \nB)Hayır")
+if Soru7=="b" or "B":
+    puanp+=10
+else:
+    print("tamam")
+Soru8=input("Soru8:Veterinerlik ve Doktorluk arasındaki seçiminiz ne olurdu? \nA)Doktor \nB)Veteriner")
+if Soru8=="a" or "A":
+    puand+=10
+elif Soru8=="b" or "B":
+    puanv+=10
+Soru9=input("Soru9:Iyi araba kullanır mısınız? \nA)Evet \nB)Hayır ")
+if Soru9=="A" or "a":
+    puans+=10
+else:
+    print("tamam")
+Soru10=input("Soru10:Polis,Doktor,Veteriner,Mühendis ve Şoför arasındaki mesleklerden hangisine en yatkın olduğunuzu düşünüyorsunuz? \nA)Polis \nB)Doktor \nC)Veteriner \nD)Mühendis \nE) şoför ")
+if Soru10=="A"or "a":
+    puanp+=10
+elif Soru10=="B"or "b":
+    puand+=10
+elif Soru10=="C"or "c":
+    puanv+=10
+elif Soru10=="d" or "D":
+    puanm+=10
+elif Soru10=="e" or "E":
+    puans+=10
+print("Doktor:",puand,"Veteriner:",puanv,"Polis:",puanp,"şoför:",puans,"Mühendis:",puanm)
+print("artık en yatkın oldugun mesleği biliyoruz ")
+print("Sorular oylesinedir")
