@@ -1,0 +1,18 @@
+#randint 3 sayı 
+import random 
+a=random.randint(1,20)
+c=0
+d=0
+print("1 ile 20 arasında bir sayı tuttum, 3 sayı girerek bu girdiğin 3 sayının toplamı tuttuğum sayıya eşit olursa kazanırsın")
+while d<10:
+    d+=1
+    for i in range(1,4):
+        b=int(input("bir sayı gir"))
+        c+=b
+    if c==a:
+        print("tebrikler kazandın")
+        print("deneme sayın:",d)
+        print("tuttuğum sayı:",a)
+    else:
+        print("tekrar denemelisin")
+print("tuttuğum sayı :",a)
