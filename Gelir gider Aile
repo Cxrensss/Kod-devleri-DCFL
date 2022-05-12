@@ -1,0 +1,142 @@
+#gelir gider aile 
+#Yaklasik %40 arkadaşımın yardımı sayesinde yapılmıştır menüyü değiştirerek aldım, değişken isimleride alınmıştır ve fonksiyonlarda sıkıntı yaşıyordum attığı kod ve anlatımı sayesinde öğrenip yaptım.Teşekkürler 
+
+
+import time
+
+giris=0
+yenim="None"
+yenig="None"
+para1=0
+para2=0
+
+giderler={"ysm":6700,
+          "yem":8700,
+          "ydm":3450,
+          "mm":2450,
+          "bg":400,
+          yenig[0:2]:para1}
+
+gelirler={"ymg":48000,
+          "dg":5800,
+          yenim[0:2]:para2}
+
+while True:
+    ms = f"""
+              ~~ GELİR-GİDER PROGRAMINIZ ~~     
+    >Merhaba gelir-giderlerinizi görüntüleyebileceğiniz
+    uygulamamıza hoş geldiniz!
+
+    >Lütfen görüntülemek istediğiniz bilgilerinizi
+    aşağıda verilen şemaya göre seçin!
+
+                GİDERLER
+       >  yıllık su masraf ysm <
+    >  yıllık elektrik masraf yem  <
+    >  yıllık doğalgaz masraf ydm  <
+        >  mutfak masraf  mm <
+        > başka gider bg <
+    >  {yenim}  {yenim[0].lower()}{yenim[1].lower()}  <
+               >  Çıkış  Q  <
+
+                GELİRLER
+      >  YILLIK MAAŞ MİKTARINIZ ymg <
+         >  DİĞER GELİRLER  dg  <
+       >  YENİ GELİR GİRİŞİ  ygg  <
+    >  {yenig}  {yenig[0].lower()}{yenig[1].lower()}  <
+              >  Çıkış  Q  <
+
+        Ulaşmak İstediğiniz Hizmet: """
+
+    cvp=input(ms)
+
+    if cvp.lower()=="ysm":
+        print(f"Yıllık su masrafınız: {giderler[cvp.lower()]}Tl 'dir.")
+        print("6 saniye sonra menü geliyor")
+        time.sleep(6)
+    elif cvp.lower()=="yem":
+        print(f"Yıllık elektrik masrafınız: {giderler[cvp.lower()]}Tl 'dir.")
+        print("6 saniye sonra menü geliyor")
+        time.sleep(6)
+    elif cvp.lower()=="ydm":
+        print(f"Yıllık doğalgaz masrafınız: {giderler[cvp.lower()]}TL 'dir.")
+        print("6 saniye sonra menü geliyor")
+        time.sleep(6)
+    elif cvp.lower()=="mm":
+        print(f"Yıllık mutfak masrafınız: {giderler[cvp.lower()]}TL 'dir.")
+        print("6 saniye sonra menü geliyor")
+        time.sleep(6)
+    elif cvp.lower()=="bg":
+        print(f"Yıllık diğer masraflarınız: {giderler[cvp.lower()]}Tl 'dir.")
+        print("6 saniye sonra menü geliyor")
+        time.sleep(6)
+    elif cvp.lower()=="ymg":
+        print(f"Yıllık maaş geliriniz: {gelirler[cvp.lower()]}₺ 'dir.")
+        print("6 saniye sonra menü geliyor.")
+        time.sleep(6)
+    elif cvp.lower()=="dg":
+        print(f"Yıllık elde ettiğiniz diğer gelirler: {gelirler[cvp.lower()]}₺ 'dir.")
+        print("6 saniye sonra menü geliyor.")
+        time.sleep(6)
+    elif cvp.lower()=="yg":
+        print("Yeni gider girişi isteği")
+        yenim=input("Yeni gidere isim gir: ")
+        para1=int(input(f"{yenim} isimli giderinizin para değeri: "))
+        giderler[yenim]=para1
+        print(f"{yenim} isimli gider {para1}Tl değeriyle giderlerinize başarıyla eklendi.")
+        print("Seçiminizde bulunan None değer değiştirildi.")
+        print("6 saniye sonra menü geliyor")
+        time.sleep(6)
+    elif cvp.lower()=="ygg":
+        print("Yeni gelir girişi isteği")
+        yenig = input("Yeni gelir isim gir: ")
+        para2 = int(input(f"{yenig} isimli gelirinizin para değeri: "))
+        gelirler[yenig]=para2
+        print(f"{yenig} isimli gelir {para2}Tl değeriyle gelirlerinize başarıyla eklendi.")
+        print("Seçiminizde bulunan None değer değiştirildi.")
+        print("6 saniye sonra menü geliyor")
+        time.sleep(6)
+    elif cvp.upper()=="Q":
+        print("Çıkış sağlanacak. \nYıllık toplam kârınızı/zararınızı görüntülemek ister misiniz?")
+        while True:
+            dg=input("E/H : ")
+            if dg.lower()=="e":
+                if giris>0:
+                    kar=(gelirler["ymg"]+gelirler["dg"]+gelirler[__yeni])-(giderler["ysm"]+giderler["yem"]+giderler["ydm"]+giderler["mm"]+giderler["bg"]+giderler[_yeni])
+                    if kar<0:
+                        print(f"{kar*-1}₺ zararınız bulunuyor. Programdan çıkış sağlandı.")
+                        break
+                    elif kar>0:
+                        print(f"{kar}₺ kârınız bulunuyor. Programdan çıkış sağlandı.")
+                        break
+                    else:
+                        print("Ne kârınız ne de zararınız bulunmamaktadır. Programdan çıkış sağlandı.")
+                        break
+                else:
+                    kar = (gelirler["ymg"] + gelirler["dg"]) - (giderler["ysm"] + giderler["yem"] + giderler["ydm"] + giderler["mm"] +giderler["bg"])
+                    if kar < 0:
+                        print(f"{kar * -1}₺ zararınız bulunuyor. Programdan çıkış sağlandı.")
+                        break
+                    elif kar > 0:
+                        print(f"{kar}₺ kârınız bulunuyor. Programdan çıkış sağlandı.")
+                        break
+                    else:
+                        print("Ne kârınız ne de zararınız bulunmamaktadır. Programdan çıkış sağlandı.")
+                        break
+            elif dg.upper()=="H":
+                print("Programdan çıkış sağlandı.")
+                break
+            else:
+                print("Hatalı seçim.")
+        break
+    elif cvp.lower()==yenig[0:2].lower():
+        print(f"Yıllık elde ettiğiniz {yenig} geliri: {gelirler[cvp.lower()]}Tl 'dir.")
+        print("6 saniye sonra menü geliyor")
+        time.sleep(6)
+    elif cvp.lower()==yenim[0:2].lower():
+        print(f"Yıllık bütçenizden çıkan {yenim} masrafı: {giderler[cvp.lower()]}Tl 'dir.")
+        print("6 saniye sonra menü geliyor ")
+        time.sleep(6)
+    else:
+        print("Hatalı seçim. Menüye yönlendiriliyorsunuz.")
+        time.sleep(6)
