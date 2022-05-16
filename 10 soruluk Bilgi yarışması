@@ -1,0 +1,42 @@
+#10 soruluk bilgi yarışması
+import time
+import random
+k_ad=input("kullanıcı adınızi giriniz")
+sorular=["Ülkemizin Başkenti neresidir? ","Türkiye'nin kaç kıtada toprağı bulunur?","(p v q) ^ p  ","Üçgenin iç açıları toplamı kaçtır?","Ulusal egemenlik ve çocuk bayramı hangi tarihtir?","1024 sayısı hangi sayının karesidir?","İstanbul hangi bölgede yer alır?","Beşgenin iç açılar toplamı nedir?","Hangisinde yer çekimi daha fazladır?","Cumhurbaşkanı kaç yılda bir seçilir?"," \‘ Türk Devleti bir Cumhuriyettir.\’ ifadesi anayasamızın kaçıncı maddesidir?","Pusulada ( N ) harfi hangi yönü ifade eder ?","Türkçe hangi dil grubuna girmektedir ?","UNICEF nedir ?","Avrupa Birliğinin başkenti neresidir?","Telefonu kim icat etmiştir ?","Türkiye’nin en yüksek dağı hangisidir ?","Türkiye'nin en büyük gölünün adı nedir ?","Pisagor teoremi hangi bilim dalıyla ilgilidir ?","Gayda nedir ?"]
+sık=["A)Ankara B) İstanbul","A)3 B)2","A)p B)q","A)190 B)180","A)23 Nisan B)19 Mayıs","A)24 B)32","A)Marmara B)ic anadolu","A)720 B)540","A)90KP B)70KP","A)4 B)5","A)1. B)11.","A)Kuzey B)Güney ","A)Altay B)Ural","A)Yardım B)Yardım","A)Brüksel B) Norveç","A)Graham Bell B) tam bel","A)Ağrı B)Everest","A)tuzlu gol  B)Van gölü","A)Geometri B)coğrafya ","A)Müzik aleti B)Ders"]
+cevaplar=["A","B","A","B","A","B","A","B","A","B","A","A","A","A","A","A","A","B","A","A"]
+print(len(sorular))
+toppuan=0
+kaçsaniye=0
+dogru_b=[]
+yanlıs_b=[]
+tur=0
+ssnum=[]
+Dg=0
+yg=0
+print("ACB bilgi yarışmasına hoşgeldin",k_ad.upper(),"bilgi yarışması 10 sorudan oluşmaktadır.Yarışma sonunda performansın hakkında detaylı bilgi alabileceksin.Başarılar:):)")
+print("soruların cevaplarını sadece sık yaziniz")
+print(50*"*")
+while tur<=9:
+    a=random.randint(0,19)
+    if a in ssnum:
+        pass
+    else:
+        tur+=1
+        b=input(f"{tur} . sorunuz {sorular[a]} \n {sık[a]}")
+        if b.upper()==cevaplar[a]:
+            print("doğru bildiniz ")
+            dogru_b.append(sorular[a])
+            toppuan+=10
+            Dg+=1
+            print("güncel puanınız {} ".format(toppuan))
+        else:
+            print("yanlış bildiniz")
+            yg+=1
+            yanlıs_b.append(sorular[a])
+print("puanınız:",toppuan)
+print("doğru bildikleriniz:",dogru_b)
+print(50*"*")
+print("yanlış bildikleriniz:",yanlıs_b)
+print("doğru sayınız ",Dg)
+print("yanlış sayınız ",yg)
